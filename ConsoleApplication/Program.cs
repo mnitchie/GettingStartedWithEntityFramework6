@@ -1,6 +1,7 @@
 ﻿using NinjaDomain.Classes;
 using NinjaDomain.DataModel;
 using System;
+using System.Data.Entity;
 
 namespace ConsoleApplication
 {
@@ -8,6 +9,7 @@ namespace ConsoleApplication
 	{
 		static void Main( string[] args )
 		{
+			Database.SetInitializer( new NullDatabaseInitializer<NinjaContext>() );
 			InsertNinja();
 			// InsertMultipleNinjas();
 			//SimpleNinjaQueries();

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NinjaDomain.Classes
 {
@@ -13,6 +10,7 @@ namespace NinjaDomain.Classes
 		public bool ServedInOniwaban { get; set; }
 		public Clan Clan { get; set; }
 		public int ClanId { get; set; }
-		public List<NinjaEquipment> EquipmentOwned { get; set; } 
+		public List<NinjaEquipment> EquipmentOwned { get; set; }
+		public DateTime DateOfBirth { get; set; }
 	}
 }

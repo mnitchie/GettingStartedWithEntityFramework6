@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Clan.cs" />
     <Compile Include="Enums\EquipmentType.cs" />
+    <Compile Include="Interfaces\IModificationHistory.cs" />
     <Compile Include="Ninja.cs" />
     <Compile Include="NinjaEquipment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

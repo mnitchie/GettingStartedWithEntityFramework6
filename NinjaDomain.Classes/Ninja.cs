@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace NinjaDomain.Classes
 {
-	public class Ninja
+	public class Ninja : IModificationHistory
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
@@ -12,5 +12,7 @@ namespace NinjaDomain.Classes
 		public int ClanId { get; set; }
 		public List<NinjaEquipment> EquipmentOwned { get; set; }
 		public DateTime DateOfBirth { get; set; }
+		public DateTime DateCreated { get; set; }
+		public DateTime DateModified { get; set; }
 	}
 }

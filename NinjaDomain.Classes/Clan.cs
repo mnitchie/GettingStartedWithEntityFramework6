@@ -10,5 +10,6 @@ namespace NinjaDomain.Classes
 		public List<Ninja> Ninjas { get; set; }
 		public DateTime DateCreated { get; set; }
 		public DateTime DateModified { get; set; }
+		public bool IsDirty { get; set; }
 	}
 }

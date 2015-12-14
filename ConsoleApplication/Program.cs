@@ -15,6 +15,7 @@ namespace ConsoleApplication
 			InsertNinja();
 			InsertMultipleNinjas();
 			SimpleNinjaQueries();
+
 			//QueryAndUpdateNinja();
 			//DeleteNinja();
 			//RetrieveDataWithFind();
@@ -87,6 +88,37 @@ namespace ConsoleApplication
 				{
 					Console.WriteLine( ninja.Name );
 				}
+			}
+		}
+
+		private static void QueryAndUpdateNinja()
+		{
+			using ( var context = new NinjaContext() )
+			{
+				context.Database.Log = Console.WriteLine;
+				var ninja = context.Ninjas.FirstOrDefault();
+				ninja.ServedInOniwaban = ( !ninja.ServedInOniwaban );
+				context.SaveChanges();
+			}
+		}
+
+		private static void QueryAndUpdateNinjaDisconnected()
+		{
+			Ninja ninja;
+			using ( var context = new NinjaContext() )
+			{
+				context.Database.Log = Console.WriteLine;
+				ninja = context.Ninjas.FirstOrDefault();
+			}
+
+			ninja.ServedInOniwaban = ( !ninja.ServedInOniwaban );
+
+			using ( var context = new NinjaContext() )
+			{
+				context.Database.Log = Console.WriteLine;
+				context.Ninjas.Attach( ninja );
+				context.Entry( ninja ).State = EntityState.Modified;
+				context.SaveChanges();
 			}
 		}
 	}

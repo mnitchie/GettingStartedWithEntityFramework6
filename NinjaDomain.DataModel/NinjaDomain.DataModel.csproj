@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201512140148488_addcreatedandmodifieddates.Designer.cs">
       <DependentUpon>201512140148488_addcreatedandmodifieddates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512140200305_modifypersistenceofisdirtyanddates.cs" />
+    <Compile Include="Migrations\201512140200305_modifypersistenceofisdirtyanddates.Designer.cs">
+      <DependentUpon>201512140200305_modifypersistenceofisdirtyanddates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NinjaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512140148488_addcreatedandmodifieddates.resx">
       <DependentUpon>201512140148488_addcreatedandmodifieddates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512140200305_modifypersistenceofisdirtyanddates.resx">
+      <DependentUpon>201512140200305_modifypersistenceofisdirtyanddates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
